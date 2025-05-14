@@ -24,8 +24,7 @@ jobs:
       run: npm run lint
     - name: Run tests
       run: npm test
-    - name: use codecov
-    - uses: actions/checkout@main
-    - uses: codecov/codecov-action@v5
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
+    - name: Upload results to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
